@@ -9,7 +9,9 @@
 
     <modules>
         <module>boot-for-qa-spring-data-jpa</module>
+        <module>boot-for-qa-spring-data-jpa-cache</module>
     </modules>
+
     <packaging>pom</packaging>
 
 	<name>Spring Boot for QA</name>
