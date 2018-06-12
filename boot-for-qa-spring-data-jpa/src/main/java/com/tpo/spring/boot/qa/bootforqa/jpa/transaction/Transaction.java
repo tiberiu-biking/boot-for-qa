@@ -1,4 +1,4 @@
-package com.tpo.spring.boot.qa.bootforqa.jpa;
+package com.tpo.spring.boot.qa.bootforqa.jpa.transaction;
 
 import lombok.Getter;
 import lombok.Setter;

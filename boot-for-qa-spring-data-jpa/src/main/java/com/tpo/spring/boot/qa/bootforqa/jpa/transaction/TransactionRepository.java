@@ -1,4 +1,4 @@
-package com.tpo.spring.boot.qa.bootforqa.jpa;
+package com.tpo.spring.boot.qa.bootforqa.jpa.transaction;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -13,4 +13,6 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
     List<Transaction> findByAmount(long amount);
+
+    List<Transaction> findByAmountGreaterThan(long amount);
 }
