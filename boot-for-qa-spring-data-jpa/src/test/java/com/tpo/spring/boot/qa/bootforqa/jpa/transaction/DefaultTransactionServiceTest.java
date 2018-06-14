@@ -1,5 +1,6 @@
-package com.tpo.spring.boot.qa.bootforqa.properties;
+package com.tpo.spring.boot.qa.bootforqa.jpa.transaction;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -8,17 +9,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+@Slf4j
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
 @ActiveProfiles("dev")
-class TestPropertiesTest {
+class DefaultTransactionServiceTest {
 
     @Autowired
-    private TestProperties testProperties;
+    private TransactionService transactionService;
 
     @Test
-    public void testPropoertiesLoading() {
-        Assertions.assertTrue(testProperties.isEnabled());
-        Assertions.assertEquals("random:9000/url", testProperties.getUrl());
+    void getTransactionsCount() {
+        transactionService.generateTransaction();
+        transactionService.generateTransaction();
+        Assertions.assertEquals(2, transactionService.getCount());
     }
 }

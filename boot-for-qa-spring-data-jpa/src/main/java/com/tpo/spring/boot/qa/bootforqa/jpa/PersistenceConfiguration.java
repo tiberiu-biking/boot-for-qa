@@ -1,7 +1,5 @@
 package com.tpo.spring.boot.qa.bootforqa.jpa;
 
-import com.tpo.spring.boot.qa.bootforqa.jpa.transaction.Transaction;
-import com.tpo.spring.boot.qa.bootforqa.jpa.transaction.TransactionRepository;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -13,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@EntityScan(basePackageClasses = Transaction.class)
-@EnableJpaRepositories(basePackageClasses = TransactionRepository.class)
+@EntityScan
+@EnableJpaRepositories
 public class PersistenceConfiguration {
 }

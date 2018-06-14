@@ -1,7 +1,5 @@
-package com.tpo.spring.boot.qa.bootforqa.jpa;
+package com.tpo.spring.boot.qa.bootforqa.jpa.transaction;
 
-import com.tpo.spring.boot.qa.bootforqa.jpa.transaction.Transaction;
-import com.tpo.spring.boot.qa.bootforqa.jpa.transaction.TransactionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,7 +58,6 @@ class TransactionRepositoryTest {
 
     private Transaction buildTransaction(long id) {
         Transaction transaction = new Transaction();
-        transaction.setId(id);
         transaction.setAmount((id + 1) * 100);
         transaction.setCurrency("EUR");
         transaction.setCreationDate(Timestamp.from(Instant.now()));

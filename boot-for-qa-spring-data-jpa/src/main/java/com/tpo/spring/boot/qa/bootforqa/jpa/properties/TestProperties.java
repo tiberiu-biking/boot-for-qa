@@ -1,9 +1,13 @@
-package com.tpo.spring.boot.qa.bootforqa.properties;
+package com.tpo.spring.boot.qa.bootforqa.jpa.properties;
 
+import com.sun.istack.internal.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.NotEmpty;
 
 /**
  * @author Tiberiu Popa
@@ -13,8 +17,12 @@ import org.springframework.stereotype.Component;
 @Setter
 @ConfigurationProperties("test")
 @Component
+@Validated
 public class TestProperties {
 
+    @NotNull
     private boolean enabled;
-    private String  url;
+
+    @NotEmpty
+    private String url;
 }

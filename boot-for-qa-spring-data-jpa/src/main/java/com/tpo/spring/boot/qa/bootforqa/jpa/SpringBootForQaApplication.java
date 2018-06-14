@@ -1,4 +1,4 @@
-package com.tpo.spring.boot.qa.bootforqa;
+package com.tpo.spring.boot.qa.bootforqa.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
