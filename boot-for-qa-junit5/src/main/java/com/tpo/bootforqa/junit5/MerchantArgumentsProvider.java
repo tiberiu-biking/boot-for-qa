@@ -1,7 +1,5 @@
-package com.tpo.spring.boot.qa.bootforqa;
+package com.tpo.bootforqa.junit5;
 
-import com.tpo.bootforqa.junit5.Merchant;
-import com.tpo.bootforqa.junit5.Transaction;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;

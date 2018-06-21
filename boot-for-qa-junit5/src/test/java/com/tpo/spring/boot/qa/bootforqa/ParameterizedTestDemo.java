@@ -1,6 +1,7 @@
 package com.tpo.spring.boot.qa.bootforqa;
 
 import com.tpo.bootforqa.junit5.Merchant;
+import com.tpo.bootforqa.junit5.MerchantArgumentsProvider;
 import com.tpo.bootforqa.junit5.TestType;
 import com.tpo.bootforqa.junit5.Transaction;
 import lombok.extern.slf4j.Slf4j;
