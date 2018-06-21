@@ -1,9 +1,7 @@
 package com.tpo.spring.boot.qa.bootforqa;
 
 import com.tpo.bootforqa.junit5.Slow;
-import com.tpo.bootforqa.junit5.TestType;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Tag;
@@ -24,16 +22,14 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 class JUnit5Demo {
 
     @Test
-    @Tag(TestType.FAST)
-    @Disabled
-    void demoDisabledTest(String candidate) {
-        log.info(candidate);
+    @Tag("fast")
+    void demoDisabledTest() {
         assumeTrue("CI".equals(System.getenv("ENV")));
     }
 
     @RepeatedTest(3)
     @DisplayName("This is a repeated test")
-    @Tag(TestType.SLOW)
+    @Tag("slow")
     void demoRepeatedTest() {
         log.info("Repeat");
     }
@@ -55,7 +51,7 @@ class JUnit5Demo {
 
     @ParameterizedTest
     @ValueSource(strings = {"test1", "test2"})
-    @Tag(TestType.SLOW)
+    @Tag("slow")
     void demoAssumptions(String candidate) {
         assumeTrue("test1".equalsIgnoreCase(candidate));
         log.info(candidate);

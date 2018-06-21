@@ -13,6 +13,7 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Tag(TestType.SLOW)
+@Tag(value = "slow")
 public @interface Slow {
+
 }
