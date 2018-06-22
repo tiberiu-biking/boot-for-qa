@@ -45,7 +45,7 @@ class ParameterizedTestDemo {
         log.info("Running the test for merchant {} with transaction {}", merchant, transaction);
     }
 
-    @ParameterizedTest(name = "{index} ==> merchant=''{0}'', transaction={1}")
+    @ParameterizedTest
     @ArgumentsSource(MerchantArgumentsProvider.class)
     void demoArgumentsSourceWithArguments(Merchant merchant, Transaction transaction) {
         log.info("Running the test for merchant {} with transaction {}", merchant, transaction);
@@ -56,6 +56,8 @@ class ParameterizedTestDemo {
     }
 
     private static Stream<Arguments> createTestMerchantsAndTransactions() {
-        return Stream.of(Arguments.of(new Merchant(1), new Transaction("C1")), Arguments.of(new Merchant(2), new Transaction("C2")));
+        return Stream.of(
+                Arguments.of(new Merchant(1), new Transaction("C1")),
+                Arguments.of(new Merchant(2), new Transaction("C2")));
     }
 }
