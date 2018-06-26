@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -17,6 +18,7 @@ import java.util.List;
 @Slf4j
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = RestClientApplication.class)
+@TestPropertySource(properties = "rest.url=https://jsonplaceholder.typicode.com/")
 class RetrofitUserRestClientTest {
 
     @Autowired
