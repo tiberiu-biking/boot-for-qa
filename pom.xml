@@ -13,7 +13,6 @@
         <module>boot-for-qa-rest-client</module>
         <module>boot-for-qa-junit5</module>
         <module>boot-for-qa-lombok</module>
-        <module>boot-for-qa-json-xml</module>
     </modules>
 
     <packaging>pom</packaging>
